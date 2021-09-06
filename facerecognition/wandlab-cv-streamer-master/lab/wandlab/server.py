@@ -69,8 +69,16 @@ def stream_gen( src ):
                 url = "http://211.51.22.141:8080/[얼굴인식 결과값 받을 주소]"
                 testUrl = "http://localhost:5000/resultRecognition"
                 headers = {'Content-Type': 'application/json; charset=utf-8'}
-                parsedAllResult = streamer.result_parser(result)
-                successResult = streamer.loadPrePropResult(parsedAllResult)
+                parsedAllResult = None
+                successResult = None
+
+                if 'DETECTION' in result.keys():
+                    print("얼굴 검출 실패")
+                    parsedAllResult = {"None" : [None, False]}
+                    successResult = {'None' : 0.0}
+                else:
+                    parsedAllResult = streamer.result_parser(result)
+                    successResult = streamer.loadPrePropResult(parsedAllResult)
                 params = {"parsedAllResult" : parsedAllResult , "successResult" : successResult}
                 print(f"전달하는 json 값: {json.dumps(params)}")
 

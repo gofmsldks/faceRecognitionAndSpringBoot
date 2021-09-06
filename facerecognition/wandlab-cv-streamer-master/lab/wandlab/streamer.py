@@ -151,7 +151,7 @@ class Streamer :
                     try:
                         self.faceRecognitionJson = runModel.run(update=False)
                     except:
-                        self.faceRecognitionJson = {'DETECTION': ''}
+                        self.faceRecognitionJson = {'DETECTION': None}
                     print(f'streamer에서의 결과{self.faceRecognitionJson}')
 
 
@@ -211,6 +211,7 @@ class Streamer :
         return img, roi  # 검출된 좌표에 사각 박스 그리고(img), 검출된 부위를 잘라(roi) 전달
 
     def result_parser(self, resultJson):
+
         resultDic = {key : [resultJson[key]['distance'], resultJson[key]['verified']] for key in resultJson}
         return resultDic
 

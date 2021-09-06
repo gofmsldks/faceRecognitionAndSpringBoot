@@ -94,6 +94,7 @@ class faceRecognitionModel:
 
         disable_option = (False if len(img_list) > 1 else True) or not prog_bar
         img2_representation_list = []
+        img1_representation = None
 
         if update is False:
             # load picke if pickle exist
@@ -118,15 +119,18 @@ class faceRecognitionModel:
 
                 for i in model_names:
                     custom_model = models[i]
+                    if img1_representation is None:
+                        # img_path, model_name = 'VGG-Face', model = None, enforce_detection = True, detector_backend = 'mtcnn'
+                        img1_representation = DeepFace.represent(img_path=img1_path
+                                                        , model_name=model_name, model=custom_model
+                                                        , enforce_detection=enforce_detection,
+                                                        detector_backend=detector_backend
+                                                        , align=align
+                                                        , normalization=normalization
+                                                        )
+                    else:
+                        pass
 
-                    # img_path, model_name = 'VGG-Face', model = None, enforce_detection = True, detector_backend = 'mtcnn'
-                    img1_representation = DeepFace.represent(img_path=img1_path
-                                                    , model_name=model_name, model=custom_model
-                                                    , enforce_detection=enforce_detection,
-                                                    detector_backend=detector_backend
-                                                    , align=align
-                                                    , normalization=normalization
-                                                    )
                     if update is True:
                             img2_representation = DeepFace.represent(img_path=img2_path
                                                             , model_name=model_name, model=custom_model
