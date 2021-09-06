@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommitComments>	<CommitComment>1. svn 오류 수정
+2. tomcat war 파일로 배포 및 테스트(일단은 잘 돌아감) </CommitComment>
+	<CommitComment>Initial test import.</CommitComment>
+</CommitComments>
