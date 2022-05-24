@@ -1,0 +1,20 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:27:03 KST 2021
+http\://repository.primefaces.org/.error=
+http\://jasperreports.sourceforge.net/maven2/.error=
+http\://repository.apache.org/snapshots/.error=
+@default-jvnet-nexus-releases-https\://maven.java.net/content/repositories/releases/.lastUpdated=1631003220231
+http\://jasperreports.sourceforge.net/maven2/.lastUpdated=1631003222775
+http\://spring-json.sourceforge.net/repository/.error=
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631003217770
+http\://repository.primefaces.org/.lastUpdated=1631003219534
+http\://repository.apache.org/snapshots/.lastUpdated=1631003220039
+http\://maven.jahia.org/maven2/.error=
+http\://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/.lastUpdated=1631003223015
+http\://maven.jahia.org/maven2/.lastUpdated=1631003222371
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.error=
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.olap4j\:olap4j\:pom\:0.9.7.309-JS-3 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/org/olap4j/olap4j/0.9.7.309-JS-3/olap4j-0.9.7.309-JS-3.pom. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631003217466
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631003220534
+http\://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/.error=
+https\://maven.java.net/content/repositories/releases/.error=Could not transfer artifact org.olap4j\:olap4j\:pom\:0.9.7.309-JS-3 from/to jvnet-nexus-releases (https\://maven.java.net/content/repositories/releases/)\: Failed to transfer https\://maven.java.net/content/repositories/releases/org/olap4j/olap4j/0.9.7.309-JS-3/olap4j-0.9.7.309-JS-3.pom. Error code 503, Service Unavailable\: Back-end server is at capacity

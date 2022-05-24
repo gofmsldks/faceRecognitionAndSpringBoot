@@ -44,8 +44,8 @@ public class DBConfig {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
 
         bean.setDataSource(dataSource);
-        bean.setMapperLocations(applicationContext.getResources("classpath:/mappers/*.xml"));
-        bean.setTypeAliasesPackage("com.ens.srs.*.dto");
+        bean.setMapperLocations(applicationContext.getResources("classpath*:/mappers/*.xml"));
+        bean.setTypeAliasesPackage("com.ens.srs.*.dto, com.ens.srs.*.*.dto, com.ens.srs.*.*.*.dto");
 
         return bean.getObject();
     }

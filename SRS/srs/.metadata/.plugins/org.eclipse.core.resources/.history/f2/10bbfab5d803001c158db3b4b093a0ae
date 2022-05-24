@@ -1,0 +1,87 @@
+document.addEventListener("DOMContentLoaded", () => {
+	console.log("dom loaded");
+	
+	const _btnSubmit = document.querySelector(".btnSubmit");
+	
+	const saveSeatInfo = async (userId)=>{
+		const locationUrl = new URL(location.href);
+		const urlParams = locationUrl.searchParams;
+		const seatNum = urlParams.get("seat");
+        
+		const today = new Date();
+		const year = today.getFullYear();
+        const month = ('0' + (today.getMonth() + 1)).slice(-2);
+        const date = ('0' + today.getDate()).slice(-2);
+        
+        const data = {
+        		"seatId": seatNum,
+        		"userId": userId,
+        		"reserveDate" : `${year}-${month}-${date}`
+        }
+        
+        const url = "/api/seat/reserve";
+        
+        try{
+        	const response = await fetch(url,{
+				method: "POST",
+				body: JSON.stringify(data),
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+        	
+        	if(response.status===200){
+        		console.log(response);
+        	}
+        }catch(e){
+        	console.log(e);
+        }
+	}
+	
+	const handleSubmit = async (e)=>{
+		e.preventDefault();
+		console.log("submit");
+
+		const _userId = document.querySelector("#userId");
+		const _userPw = document.querySelector("#userPw");
+
+		// 아이디 or 패스워드 공백 처리
+		if (_userId.value === "") {
+			alert("아이디를 입력해주세요.");
+			return;
+		} else if (_userPw.value === "") {
+			alert("비밀번호를 입력해주세요.");
+			return;
+		}
+
+		const url = "/api/user/login";
+		const data = {
+			userId: _userId.value,
+			userPw: _userPw.value
+		};
+
+		try{
+			const response = await fetch(url, {
+				method: "POST",
+				body: JSON.stringify(data),
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+			if(response.status === 200){
+				const user = await response.json();
+				if(user.reserved === 1){
+					alert("이미 좌석을 예약하셨습니다.");
+					return;
+				}else{
+					saveSeatInfo(user.userId);
+					alert(`${user.userName} ${user.position}님 좌석 예약 성공하셨습니다.`);	
+				}
+			}
+		}catch(e){
+			console.log(e);
+		}
+	}
+	
+	_btnSubmit.addEventListener("click",handleSubmit);
+});

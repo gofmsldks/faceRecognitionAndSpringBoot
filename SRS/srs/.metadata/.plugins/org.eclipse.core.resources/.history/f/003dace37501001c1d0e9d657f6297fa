@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ens.srs.mappers.usermapper">
+	<resultMap type="LoginUserDto" id="login">
+		<result column="user_id" property="userId" />
+		<result column="user_name" property="userName" />
+	</resultMap>
+	
+	<select id="login" resultMap="login"
+		parameterType="LoginDto">
+		SELECT user_id,user_name,phone,position
+		FROM user
+		WHERE user_id=#{userId}
+	</select>
+</mapper>

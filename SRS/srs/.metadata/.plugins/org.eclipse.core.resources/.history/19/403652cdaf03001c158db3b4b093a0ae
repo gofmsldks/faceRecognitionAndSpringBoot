@@ -1,0 +1,5 @@
+package com.ens.srs.user.information.dto;
+
+public class InformationDto {
+
+}

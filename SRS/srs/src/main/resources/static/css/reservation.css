@@ -1,0 +1,324 @@
+@charset "UTF-8";
+
+.row.content {
+	display: block;
+	flex-direction: unset;
+	align-items: unset;
+	justify-content: unset;
+	background-color: unset;
+	position: relative;
+}
+
+/* 좌석 영역 */
+.partSeat {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	background-color: #fff;
+	border-radius: 10px;
+	margin-right: 24vw;
+	padding: 0 0 10vh 20vw;
+	position: relative;
+	overflow: hidden;
+}
+
+.partSeat::before {
+	content: "";
+	display: block;
+	background: url("../img/door.png") no-repeat 0/6vw 11vh;
+	width: 6vw;
+	height: 11vh;
+	position: absolute;
+	bottom: 12vh;
+	left: 2vw;
+}
+
+.rooms {
+	z-index: 1;
+}
+
+.conference {
+	border: 5px solid #d2d2d2;
+	background-color: #fff;
+	font-size: 1vw;
+	font-weight: bold;
+	transition-duration: 0.1s;
+}
+
+.conference:active {
+	border: 8px solid #81b2ce;
+	background-color: #b3cfdf;
+}
+
+.room-1 {
+	width: 10vw;
+	height: 50vh;
+	border-radius: 10px;
+	position: absolute;
+	top: 4vh;
+	left: 3vw;
+}
+
+.room-3 {
+	width: 20vw;
+	height: 14vh;
+	border-radius: 10px;
+	position: absolute;
+	bottom: 2vh;
+	left: 23vw;
+}
+
+.room-2 {
+	width: 10vw;
+	height: 14vh;
+	border-radius: 10px;
+	position: absolute;
+	bottom: 2vh;
+	left: 43vw;
+}
+
+.room-4 {
+	width: 10vw;
+	height: 50vh;
+	background-color: #e1e1e1;
+	border-radius: 10px;
+	position: absolute;
+	top: 4vh;
+	left: 13vw;
+}
+
+.room-5 {
+	width: 16vw;
+	height: 16vh;
+	background-color: #e1e1e1;
+	border-radius: 10px;
+	position: absolute;
+	top: 4vh;
+	left: 30vw;
+}
+
+.room-6 {
+	width: 10vw;
+	height: 14vh;
+	background-color: #e1e1e1;
+	border-radius: 10px;
+	position: absolute;
+	bottom: 2vh;
+	left: 53vw;
+}
+
+.seat {
+	height: 100%;
+	width: 40vw;
+	position: relative;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.seatBtn {
+	vertical-align: top;
+	cursor: pointer;
+	width: 3.5vw;
+	height: 3.5vw;
+	font-weight: bold;
+	font-size: 14px;
+	text-shadow: 0 0 5px #fff;
+	background-color: #007ff71f;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 0 4px #797979;
+	transition-duration: 0.1s;
+}
+
+.seatBtn:hover {
+	background-color: #daedfd;
+}
+
+.seatBtn:active {
+	background-color: #9aa8b3;
+	box-shadow: 0 0 1px #0f0f0f;
+}
+
+.seatBtn.fixed {
+	cursor: not-allowed;
+}
+
+.seatBtn.fixed:hover {
+	background-color: #4949498a;
+}
+
+.seatBtn.fixed:active {
+	background-color: #4949498a;
+	box-shadow: none;
+}
+
+.seats-1,
+.seats-2,
+.seats-3 {
+	display: flex;
+	flex-direction: row;
+}
+
+.seats-3 {
+	position: relative;
+}
+
+.seats-2,
+.seats-3 {
+	margin-top: 4vh;
+}
+
+.seats-1-1,
+.seats-1-2,
+.seats-2-1,
+.seats-2-2,
+.seats-3-1,
+.seats-3-2 {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.seats-1-1 div,
+.seats-1-2 div,
+.seats-2-1 div,
+.seats-2-2 div,
+.seats-3-1 div,
+.seats-3-2 div {
+	margin: 2px 0;
+}
+
+.seats-1-1 {
+	margin-left: 350px;
+}
+
+.seats-2-2,
+.seats-3-2 {
+	margin-left: 100px;
+}
+
+.seats-1-1 .tl,
+.seats-2-2 .tl,
+.seats-3-2 .tl {
+	position: absolute;
+	top: 30px;
+	right: -4vw;
+}
+
+.reserved {
+	background-color: #c9f694ba !important;
+}
+
+.reserved:hover {
+	background-color: #c9f694 !important;
+}
+
+.reserved:active {
+	background-color: #96bd68 !important;
+}
+
+.fixed {
+	background-color: #4949498a;
+}
+
+/* 사원리스트 영역 */
+.partList {
+	width: 24vw;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.partListWrap {
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 10px;
+	height: 100%;
+}
+
+.dropdownBtn {
+	width: 100%;
+}
+
+.dropdown-menu {
+	width: 100%;
+	padding: 0;
+}
+
+.dropdown-menu .btn {
+	width: 100%;
+	border-radius: 0;
+}
+
+.radioLabel {
+	width: 100%;
+}
+
+.userRadio {
+	position: static !important;
+	margin: 0 6px 0 -20px !important;
+}
+
+.radio {
+	position: relative;
+}
+
+input[type="radio"][name="userRadio"]:checked:after {
+	display: block;
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #59a6fe30;
+}
+
+/* modal */
+.modal-header span {
+	font-weight: bold;
+	color: #28424e;
+}
+
+.modalBody {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	padding: 60px
+}
+
+.profileImg {
+	width: 160px;
+	height: 200px;
+	overflow: hidden;
+	margin-right: 60px;
+}
+
+.profileImg img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.userInfo {
+	font-size: 20px;
+	font-weight: bold;
+	color: #28424e;
+}
+
+.modalAlertBox {
+	margin: 200px auto;
+}
+
+.modalAlertTxt {
+	text-align: center;
+	padding: 30px;
+	font-size: 24px;
+}

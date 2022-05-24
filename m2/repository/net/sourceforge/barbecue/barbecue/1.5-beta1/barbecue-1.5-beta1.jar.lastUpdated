@@ -1,0 +1,13 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:39:03 KST 2021
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631003468318
+http\://repository.apache.org/snapshots/.lastUpdated=1631003709451
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631003943799
+http\://repository.primefaces.org/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+https\://maven.java.net/content/repositories/releases/.lastUpdated=1631003829631
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact net.sourceforge.barbecue\:barbecue\:jar\:1.5-beta1 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/net/sourceforge/barbecue/barbecue/1.5-beta1/barbecue-1.5-beta1.jar. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631003417783
+https\://maven.java.net/content/repositories/releases/.error=
+http\://repository.primefaces.org/.lastUpdated=1631003654710
+http\://repository.apache.org/snapshots/.error=

@@ -1,0 +1,16 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:10:51 KST 2021
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631002245192
+http\://repository.apache.org/snapshots/.lastUpdated=1631002247756
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.error=
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631002249610
+http\://repository.primefaces.org/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+http\://maven.jahia.org/maven2/.error=
+https\://maven.java.net/content/repositories/releases/.lastUpdated=1631002248865
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact com.lassitercg\:jsf-sheet\:pom\:1.1 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/com/lassitercg/jsf-sheet/1.1/jsf-sheet-1.1.pom. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631002244820
+https\://maven.java.net/content/repositories/releases/.error=
+http\://repository.primefaces.org/.lastUpdated=1631002247228
+http\://maven.jahia.org/maven2/.lastUpdated=1631002251156
+http\://repository.apache.org/snapshots/.error=

@@ -1,0 +1,20 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:15:13 KST 2021
+http\://repository.primefaces.org/.error=
+http\://repository.apache.org/snapshots/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631002506213
+http\://www.terracotta.org/download/reflector/releases/.error=
+http\://repository.primefaces.org/.lastUpdated=1631002507980
+http\://repository.apache.org/snapshots/.lastUpdated=1631002508456
+http\://maven.jahia.org/maven2/.error=
+http\://maven.jahia.org/maven2/.lastUpdated=1631002511347
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.error=
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.slf4j\:slf4j-api\:pom\:1.6.6 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.6.6/slf4j-api-1.6.6.pom. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631002505821
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631002509787
+http\://www.terracotta.org/download/reflector/snapshots/.error=Could not transfer artifact org.slf4j\:slf4j-api\:pom\:1.6.6 from/to terracotta-snapshots (http\://www.terracotta.org/download/reflector/snapshots)\: Access denied to http\://www.terracotta.org/download/reflector/snapshots/org/slf4j/slf4j-api/1.6.6/slf4j-api-1.6.6.pom. Error code 403, Forbidden
+https\://maven.java.net/content/repositories/releases/.lastUpdated=1631002509482
+@default-terracotta-snapshots-http\://www.terracotta.org/download/reflector/snapshots/.lastUpdated=1631002512208
+http\://www.terracotta.org/download/reflector/releases/.lastUpdated=1631002513025
+https\://maven.java.net/content/repositories/releases/.error=

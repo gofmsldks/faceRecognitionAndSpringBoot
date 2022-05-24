@@ -1,0 +1,78 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%> -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRS : ID LOGIN</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- custum css -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/idLogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid wrap">
+        <div class="navbar-header">
+            <a class="navbar-brand logo-icon" href="#">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="header">
+                <h4 class="title">좌석예약시스템</h4>
+                <div class="date">
+                    <div class="curDate">
+                        <span class="cdate">02월 05일</span>
+                        <span class="cday">월요일</span>
+                    </div>
+                    <div class="curTime">12시 34분</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row content">
+            <div class="formWrap">
+                <h5 class="subtitle"">LOGIN</h5>
+                <form>
+                    <div class=" input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="email" type="text" class="form-control" name="email" placeholder="ID">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <br>
+            </form>
+            <div class="btnWrap">
+                <button type="button" class="btn btn-default btn-lg">취소</button>
+                <button type="button" class="btn btn-primary btn-lg">좌석 예약</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer class="container-fluid footer">
+        <p>Footer</p>
+    </footer>
+
+    <script src="idLogin.js"></script>
+</body>
+
+</html>

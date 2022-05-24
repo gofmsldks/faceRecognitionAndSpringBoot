@@ -1,0 +1,7 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:34:14 KST 2021
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631003417793
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631003468325
+http\://spring-json.sourceforge.net/repository/.error=
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.primefaces.themes\:all-themes\:jar\:1.0.10 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/org/primefaces/themes/all-themes/1.0.10/all-themes-1.0.10.jar. Error code 501, HTTPS Required
+http\://repository.primefaces.org/.lastUpdated=1631003654724

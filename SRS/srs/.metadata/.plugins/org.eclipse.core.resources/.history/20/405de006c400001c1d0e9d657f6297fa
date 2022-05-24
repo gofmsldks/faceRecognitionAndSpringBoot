@@ -1,0 +1,10 @@
+package com.ens.srs.user.auth.login;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class LoginDto {
+	public String Login() {
+		return "idLogin";
+	}
+}

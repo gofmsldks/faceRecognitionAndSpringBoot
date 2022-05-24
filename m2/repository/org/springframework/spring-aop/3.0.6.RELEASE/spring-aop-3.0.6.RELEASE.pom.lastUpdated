@@ -1,0 +1,13 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:23:57 KST 2021
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631003032487
+http\://repository.apache.org/snapshots/.lastUpdated=1631003034962
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631003037289
+http\://repository.primefaces.org/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+https\://maven.java.net/content/repositories/releases/.lastUpdated=1631003036672
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.springframework\:spring-aop\:pom\:3.0.6.RELEASE from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/org/springframework/spring-aop/3.0.6.RELEASE/spring-aop-3.0.6.RELEASE.pom. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631003032161
+https\://maven.java.net/content/repositories/releases/.error=
+http\://repository.primefaces.org/.lastUpdated=1631003034493
+http\://repository.apache.org/snapshots/.error=

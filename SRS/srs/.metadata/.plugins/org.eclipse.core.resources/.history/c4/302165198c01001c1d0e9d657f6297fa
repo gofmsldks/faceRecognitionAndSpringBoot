@@ -1,0 +1,5 @@
+package com.ens.srs.seat.reservation.dao;
+
+public class ReservationDao {
+
+}

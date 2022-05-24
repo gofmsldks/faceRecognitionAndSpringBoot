@@ -1,0 +1,351 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  .container-fluid.wrap,
+  .modal-content .modalHeader {
+    display: none;
+  }
+
+  .modal {
+    -ms-overflow-style: none;
+  }
+
+  .modal::-webkit-scrollbar {
+    display: none;
+  }
+
+  .modal-body .track-slot {
+    background-color: rgb(253, 238, 166) !important;
+  }
+
+  .modal-body .time-slot {
+    border-top: 2px solid #d2d2d2 !important;
+    background-color: whitesmoke !important;
+    font-size: 16pt !important;
+  }
+
+  .modal-body .session {
+    background-color: #c1ddff !important;
+    font-size: 16pt !important;
+  }
+
+  .modal-body {
+    border: 0;
+    padding: 20mm 60mm;
+    height: 100%;
+    font-size: 16pt !important;
+    overflow-y: hidden;
+  }
+
+  .modal-body .schedule {
+    overflow: auto !important;
+    height: 400mm;
+    display: grid;
+    grid-template-rows: [tracks] 1fr [time-0800] 1fr [time-0830] 1fr [time-0900] 1fr [time-0930] 1fr [time-1000] 1fr [time-1030] 1fr [time-1100] 1fr [time-1130] 1fr [time-1200] 1fr [time-1300] 1fr [time-1330] 1fr [time-1400] 1fr [time-1430] 1fr [time-1500] 1fr [time-1530] 1fr [time-1600] 1fr [time-1630] 1fr [time-1700] 1fr [time-1730] 1fr [time-1800] 1fr [time-1830] 1fr [time-1900] 1fr !important;
+    grid-template-columns: [times] 30mm [track-1-start] 1fr [track-1-end] !important;
+  }
+
+  .modal-body .session-title,
+  .modal-body .session-presenter {
+    font-size: 16pt !important;
+  }
+}
+
+.row.content {
+  overflow: hidden;
+}
+
+.printButton {
+  margin-left: 10px;
+}
+
+/* timeTable */
+.timeTable {
+  margin-right: 20px;
+  height: 100%;
+  flex: 1 1 0;
+}
+
+.schedule {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 0 0 0 10px;
+  display: inline-grid;
+  grid-gap: 2px 6px;
+  grid-template-rows:
+    [tracks] auto [time-0800] 1fr [time-0830] 1fr [time-0900] 1fr [time-0930] 1fr [time-1000] 1fr [time-1030] 1fr [time-1100] 1fr [time-1130] 1fr [time-1200] 1fr [time-1300] 1fr [time-1330] 1fr [time-1400] 1fr [time-1430] 1fr [time-1500] 1fr [time-1530] 1fr [time-1600] 1fr [time-1630] 1fr [time-1700] 1fr [time-1730] 1fr [time-1800] 1fr [time-1830] 1fr [time-1900] 1fr;
+
+  grid-template-columns:
+    [times] 5em [track-1-start] 1fr [track-1-end];
+}
+
+.track-slot {
+  font-size: 1.4em;
+  text-align: center;
+  display: block;
+  padding: 10px 5px 5px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(253, 239, 166, 0.507);
+}
+
+.time-slot {
+  grid-column: times;
+  border-top: 2px solid #d2d2d2;
+  background-color: whitesmoke;
+  font-size: 14px;
+}
+
+.session {
+  padding: 0.5em;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #c1ddffec;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.session.breakTime {
+  background-color: #ffccccec;
+}
+
+.session-title,
+.session-presenter {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 16px;
+  font-size: 14px;
+}
+
+/* reserveView */
+.reserveView {
+  border-left: 1px solid #e1e1e1;
+  height: 100%;
+  flex: 2.5 1 0;
+}
+
+.confReserveForm {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8px;
+}
+
+/* select time */
+.selectTime {
+  margin: 0 8px;
+  flex: 1;
+}
+
+.selectWrap:not(:first-child) {
+  margin-top: 20px;
+}
+
+.selectTitle {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 2em;
+  text-align: center;
+  background-color: rgba(253, 239, 166, 0.507);
+  border-radius: 10px 10px 0 0;
+}
+
+.selectStart,
+.selectFinish {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  background-color: #f3f3f3;
+}
+
+.selectStart button:active,
+.selectFinish button:active {
+  background-color: rgb(203, 227, 255);
+}
+
+.selectTime span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cRadioWrap {
+  padding: 30px;
+  display: flex;
+}
+
+.customRadio {
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 4vh;
+}
+
+.cShowRadio {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.customRadio input {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  vertical-align: top;
+}
+
+.cShowRadiolabel {
+  margin: 0;
+  padding: 6px 0;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #acacac;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.customRadio .cShowRadioInput:checked+.cShowRadiolabel {
+  border: 2px solid #888888;
+  background-color: rgb(227 255 179);
+  padding: 4px 0;
+}
+
+.customRadio .cShowRadioInput:disabled+.cShowRadiolabel {
+  background-color: #c0c0c0;
+  color: #636363;
+  cursor: not-allowed;
+}
+
+.sessionInfo {
+  margin: 0 8px;
+  flex: 1.5;
+}
+
+.sessionInfo #inputTitle {
+  margin-top: 10px;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  line-height: 1.8em;
+  margin-bottom: 12px;
+}
+
+.subtitle .st,
+.subtitle .ft {
+  font-weight: bold;
+}
+
+.buttonWrap {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+}
+
+.modalHeader::before {
+  content: none !important;
+  display: none !important;
+}
+
+.modalHeader::after {
+  clear: none !important;
+}
+
+.modal-body .schedule {
+  grid-template-rows:
+    [tracks] auto [time-0800] 30px [time-0830] 30px [time-0900] 30px [time-0930] 30px [time-1000] 30px [time-1030] 30px [time-1100] 30px [time-1130] 30px [time-1200] 30px [time-1300] 30px [time-1330] 30px [time-1400] 30px [time-1430] 30px [time-1500] 30px [time-1530] 30px [time-1600] 30px [time-1630] 30px [time-1700] 30px [time-1730] 30px [time-1800] 30px [time-1830] 30px [time-1900] 30px;
+}
+
+.dateContainer {
+  position: relative;
+}
+
+#selectDate::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+}
+
+#selectDate::-webkit-datetime-edit {
+  width: 100%;
+}
+
+.subtitle.selectedDate span {
+  font-weight: bold;
+}
+
+.dropTitles {
+  width: 100%;
+}
+
+.dropTitles .dropdown-toggle {
+  width: 100%;
+  text-align: start;
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  color: #555;
+}
+
+.dropTitles .dropdown-menu {
+  right: 0;
+}
+
+.dropTitles .dropdown-menu li {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  height: 46px;
+  color: #555;
+}
+
+.dropTitles .dropdown-menu li:hover {
+  background-color: #e6e6e6;
+}
+
+.selected {
+  background-color: #e6e6e6;
+}

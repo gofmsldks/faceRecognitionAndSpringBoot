@@ -1,0 +1,9 @@
+1629680365332	Delete element
+1629680428029	Rename type 'informationService'
+1629680435876	Rename type 'informationDto'
+1629680444332	Rename type 'informationController'
+1629680451629	Rename type 'informationDao'
+1629681146641	Rename type 'LoginUserDto'
+1629681414065	Delete element
+1629695040664	Rename type 'ReservationDto'
+1629765260699	Move 'faceRecog.css' to 'css'

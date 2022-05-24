@@ -1,0 +1,11 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:11:25 KST 2021
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631002282242
+http\://repository.apache.org/snapshots/.lastUpdated=1631002284482
+http\://repository.primefaces.org/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+https\://maven.java.net/content/repositories/releases/.lastUpdated=1631002285686
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact javax.servlet\:javax.servlet-api\:pom\:3.0.1 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.pom. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631002281949
+http\://repository.primefaces.org/.lastUpdated=1631002283956
+http\://repository.apache.org/snapshots/.error=

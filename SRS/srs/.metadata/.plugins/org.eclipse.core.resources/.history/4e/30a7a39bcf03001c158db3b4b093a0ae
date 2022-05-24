@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ens.srs.mappers.seatmapper">
+	<resultMap type="ReservationDto" id="getStatus">
+		<result column="seat_id" property="seatId" />
+		<result column="is_reserved" property="isReserved" />
+		<result column="user_id" property="userId" />
+		<result column="reserve_date" property="reserveDate" />
+	</resultMap>
+
+	<select id="getStatus" resultMap="getStatus">
+		SELECT *
+		FROM seat
+	</select>
+	
+	<update id="reserve" parameterType="">
+		UPDATE seat
+		SET is_reserved = "1"
+		,user_id = ""
+		,reserve_date = ""
+		WHERE seat_id = ""
+	</update>
+</mapper>

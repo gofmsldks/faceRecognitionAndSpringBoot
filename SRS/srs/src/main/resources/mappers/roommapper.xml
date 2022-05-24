@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ens.srs.mappers.roommapper">
+	<resultMap type="ReserveItemDto" id="getList">
+		<result column="NO_CONF" property="noConf" />
+		<result column="START_DATE" property="startDate" />
+		<result column="END_DATE" property="endDate" />
+		<result column="START_TIME" property="startTime" />
+		<result column="END_TIME" property="endTime" />
+		<result column="CONTENTS" property="contents" />
+		<result column="ID_USER" property="idUser" />
+		<result column="NM_USER" property="nmUser" />
+		<result column="CD_TEAM" property="cdTeam" />
+		<result column="NM_TEAM" property="nmTeam" />
+		<result column="CD_RANK" property="cdRank" />
+		<result column="NM_RANK" property="nmRank" />
+	</resultMap>
+
+	<select id="getList" resultMap="getList" parameterType="SelectItemDto">
+		SELECT 	 NO_CONF
+				,START_DATE
+				,END_DATE
+				,START_TIME
+				,END_TIME
+				,CONTENTS
+				,ID_USER
+				,NM_USER
+				,CD_TEAM
+				,NM_TEAM
+				,CD_RANK
+				,NM_RANK
+		FROM 	 day_conf
+		WHERE 	 START_DATE = #{startDate}
+			AND	 NO_CONF = #{noConf}
+	</select>
+	
+	<insert id="reserve" parameterType="ReserveItemDto">
+		INSERT INTO  day_conf
+				   ( NO_CONF
+					,START_TIME
+					,END_TIME
+					,CONTENTS
+					,START_DATE
+					,END_DATE
+					,ID_USER
+					,NM_USER
+					,CD_TEAM
+					,NM_TEAM
+					,CD_RANK
+					,NM_RANK)
+		VALUES    (	 #{noConf}
+					,#{startTime}
+					,#{endTime}
+					,#{contents}
+					,#{startDate}
+					,#{endDate}
+					,#{idUser}
+					,#{nmUser}
+					,#{cdTeam}
+					,#{nmTeam}
+					,#{cdRank}
+					,#{nmRank}
+				  )
+			   
+	</insert>
+	
+	<select id="checkBeforeCancel" parameterType="ReserveItemDto" resultType="int">
+		SELECT 	 		COUNT(*)
+		FROM 	 		day_conf
+		WHERE			ID_USER = #{idUser}
+			AND			NO_CONF = #{noConf}
+			AND			START_DATE = #{startDate}
+			AND			END_DATE = #{endDate}
+			AND			START_TIME = #{startTime}
+			AND			END_TIME = #{endTime}
+	</select>
+	
+	<delete id="cancel" parameterType="ReserveItemDto">
+		DELETE FROM		day_conf
+		WHERE			ID_USER = #{idUser}
+			AND			NO_CONF = #{noConf}
+			AND			START_DATE = #{startDate}
+			AND			END_DATE = #{endDate}
+			AND			START_TIME = #{startTime}
+			AND			END_TIME = #{endTime}
+	</delete>
+	
+	<select id="getAllStatus" resultMap="getList">
+		SELECT 	 NO_CONF
+				,START_DATE
+				,END_DATE
+				,START_TIME
+				,END_TIME
+				,CONTENTS
+				,ID_USER
+				,NM_USER
+				,CD_TEAM
+				,NM_TEAM
+				,CD_RANK
+				,NM_RANK
+		FROM 	 day_conf
+		WHERE 	 START_DATE = DATE_FORMAT(CURRENT_TIMESTAMP, '%Y-%m-%d')
+	</select>
+
+</mapper>

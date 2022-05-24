@@ -1,0 +1,13 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:18:33 KST 2021
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631002709083
+http\://repository.apache.org/snapshots/.lastUpdated=1631002711295
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631002713944
+http\://repository.primefaces.org/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+https\://maven.java.net/content/repositories/releases/.lastUpdated=1631002713335
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.bouncycastle\:bctsp-jdk14\:pom\:1.38 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/org/bouncycastle/bctsp-jdk14/1.38/bctsp-jdk14-1.38.pom. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631002708749
+https\://maven.java.net/content/repositories/releases/.error=
+http\://repository.primefaces.org/.lastUpdated=1631002710801
+http\://repository.apache.org/snapshots/.error=

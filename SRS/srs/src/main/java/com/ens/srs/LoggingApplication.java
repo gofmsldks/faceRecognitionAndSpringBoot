@@ -17,7 +17,7 @@ public class LoggingApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(LoggingApplication.class, args);
-        log.trace("Hi I'm {} log", "TRACE"); // lombok(@Slf4j 쓸땐 log 선언)
+        log.trace("Hi I'm {} log", "TRACE"); // lombok(@Slf4j 쓸땐 log)
         log.debug("Hi I'm {} log", "DEBUG"); //  
         log.info("Hi I'm {} log", "INFO");
         log.warn("Hi I'm {} log", "WARN");

@@ -1,0 +1,13 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:27:31 KST 2021
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631003247992
+@default-jvnet-nexus-releases-https\://maven.java.net/content/repositories/releases/.lastUpdated=1631003250418
+http\://repository.apache.org/snapshots/.lastUpdated=1631003250227
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631003251032
+http\://repository.primefaces.org/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.primefaces\:primefaces\:pom\:6.0 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/org/primefaces/primefaces/6.0/primefaces-6.0.pom. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631003247669
+https\://maven.java.net/content/repositories/releases/.error=Could not transfer artifact org.primefaces\:primefaces\:pom\:6.0 from/to jvnet-nexus-releases (https\://maven.java.net/content/repositories/releases/)\: Failed to transfer https\://maven.java.net/content/repositories/releases/org/primefaces/primefaces/6.0/primefaces-6.0.pom. Error code 503, Service Unavailable\: Back-end server is at capacity
+http\://repository.primefaces.org/.lastUpdated=1631003249705
+http\://repository.apache.org/snapshots/.error=

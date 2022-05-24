@@ -1,0 +1,20 @@
+package com.ens.srs.seat.reservation.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ens.srs.seat.reservation.dao.ReservationDao;
+import com.ens.srs.seat.reservation.dto.ReservationDto;
+
+@Service
+public class ReservationService {
+	
+	@Autowired
+	private ReservationDao reservationDao;
+	
+	public List<ReservationDto> getStatus(){
+		return reservationDao.getStatus();
+	}
+}

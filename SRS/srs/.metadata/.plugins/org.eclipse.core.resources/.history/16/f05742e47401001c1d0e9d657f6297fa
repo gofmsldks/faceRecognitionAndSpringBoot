@@ -1,0 +1,21 @@
+package com.ens.srs.user.auth.login.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.ens.srs.user.auth.login.dto.LoginUserDto;
+
+@Repository
+public class LoginDao {
+	private static final String NAME_SPACE = "com.ens.srs.mappers.usermapper";
+
+	@Autowired
+	SqlSession sqlSession;
+
+	public LoginUserDto login() {
+		return sqlSession.selectOne(NAME_SPACE + ".login");
+	}
+}

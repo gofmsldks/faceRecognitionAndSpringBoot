@@ -1,0 +1,12 @@
+package com.ens.srs.user.auth.login.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ens.srs.user.auth.login.dao.LoginDao;
+import com.ens.srs.user.auth.login.dto.LoginUserDto;
+
+@Service
+public class LoginService {
+
+}

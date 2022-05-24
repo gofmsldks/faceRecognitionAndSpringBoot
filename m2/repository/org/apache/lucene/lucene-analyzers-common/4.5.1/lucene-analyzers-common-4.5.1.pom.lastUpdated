@@ -1,0 +1,13 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:26:38 KST 2021
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631003195559
+@default-jvnet-nexus-releases-https\://maven.java.net/content/repositories/releases/.lastUpdated=1631003197988
+http\://repository.apache.org/snapshots/.lastUpdated=1631003197796
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631003198635
+http\://repository.primefaces.org/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.apache.lucene\:lucene-analyzers-common\:pom\:4.5.1 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/org/apache/lucene/lucene-analyzers-common/4.5.1/lucene-analyzers-common-4.5.1.pom. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631003195259
+https\://maven.java.net/content/repositories/releases/.error=Could not transfer artifact org.apache.lucene\:lucene-analyzers-common\:pom\:4.5.1 from/to jvnet-nexus-releases (https\://maven.java.net/content/repositories/releases/)\: Failed to transfer https\://maven.java.net/content/repositories/releases/org/apache/lucene/lucene-analyzers-common/4.5.1/lucene-analyzers-common-4.5.1.pom. Error code 503, Service Unavailable\: Back-end server is at capacity
+http\://repository.primefaces.org/.lastUpdated=1631003197290
+http\://repository.apache.org/snapshots/.error=

@@ -1,0 +1,29 @@
+package com.ens.srs.user.auth.login;
+
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+@Controller
+public class LoginController {
+
+	@GetMapping("/login")
+	public String idLogin() {
+		return "idLogin";
+	}
+
+	@PostMapping("/login")
+	public ResponseEntity login(@RequestBody LoginDto loginDto) {
+		HttpHeaders headers = new HttpHeaders();
+		headers.set("Game", "Chess");
+
+		System.out.println("login Dto : " + loginDto);
+
+		return new ResponseEntity("success", HttpStatus.OK);
+	}
+
+}

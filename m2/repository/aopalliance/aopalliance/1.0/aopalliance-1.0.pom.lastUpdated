@@ -1,0 +1,13 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:12:50 KST 2021
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631002365809
+http\://repository.apache.org/snapshots/.lastUpdated=1631002368470
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631002370074
+http\://repository.primefaces.org/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+https\://maven.java.net/content/repositories/releases/.lastUpdated=1631002369472
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact aopalliance\:aopalliance\:pom\:1.0 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.pom. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631002365489
+https\://maven.java.net/content/repositories/releases/.error=
+http\://repository.primefaces.org/.lastUpdated=1631002367945
+http\://repository.apache.org/snapshots/.error=

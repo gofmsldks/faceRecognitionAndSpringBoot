@@ -1,0 +1,16 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:39:34 KST 2021
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631003468295
+http\://repository.apache.org/snapshots/.lastUpdated=1631003709435
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.error=
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631003943357
+http\://repository.primefaces.org/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+http\://maven.jahia.org/maven2/.error=
+https\://maven.java.net/content/repositories/releases/.lastUpdated=1631003829615
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.apache.httpcomponents\:httpmime\:jar\:4.3.3 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpmime/4.3.3/httpmime-4.3.3.jar. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631003417756
+https\://maven.java.net/content/repositories/releases/.error=
+http\://repository.primefaces.org/.lastUpdated=1631003654670
+http\://maven.jahia.org/maven2/.lastUpdated=1631003974125
+http\://repository.apache.org/snapshots/.error=

@@ -1,0 +1,24 @@
+package com.ens.srs.seat.reservation.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.ens.srs.seat.reservation.service.ReservationService;
+
+@Controller
+public class ReservationController {
+	
+	@Autowired
+	ReservationService reservationService;
+	
+	@GetMapping("/")
+	public String reservation() {
+		return "reservation";
+	}
+	
+	@GetMapping("/api/seat/status")
+	public ResponseEntity seatStatus() {
+		
+	}
+}

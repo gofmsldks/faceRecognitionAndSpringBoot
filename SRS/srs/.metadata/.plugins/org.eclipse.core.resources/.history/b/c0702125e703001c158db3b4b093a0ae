@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+.seat {
+	width: 598px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.seat::before {
+	content: "";
+	background: url(../img/seat.png) no-repeat;
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.seat button {
+	position: absolute;
+	background-color: transparent;
+	width: 84px;
+	height: 100px;
+	font-weight: bold;
+	font-size: 14px;
+	text-shadow: 0 0 10px #fff;
+	background-color: #007ff71f;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 4px 0 #797979;
+	transition-duration: 0.1s;
+}
+
+.seat button:hover {
+	background-color: #daedfd;
+}
+
+.seat button:active {
+	margin: 4px 0 0 1px;
+	box-shadow: none;
+}
+
+.reserved {
+	background-color: #c9f694ba !important;
+}
+
+.reserved:hover {
+	background-color: #c9f694 !important;
+}
+
+.seats-1, .seats-2, .seats-3, .seats-4 {
+	position: absolute;
+}
+
+.seats-1 {
+	top: 0;
+	left: 0;
+}
+
+.seats-2 {
+	top: 0;
+	left: 340px;
+}
+
+.seats-3 {
+	top: 267px;
+	left: 0;
+}
+
+.seats-4 {
+	top: 267px;
+	left: 340px;
+}
+
+/* 1번 */
+.seats-1 .E1 {
+    top: 0;
+    left: 0;
+}
+
+.seats-1 .E2{
+    top: 0;
+    left: 88px;
+}
+
+.seats-1 .E3 {
+    top: 0;
+    left: 174px;
+}
+
+.seats-1 .E4{
+    top:108px;
+    left: 0;
+}
+
+.seats-1 .E5{
+    top: 108px;
+    left: 88px;
+}
+
+.seats-1 .E6{
+    top: 108px;
+    left: 174px;
+}
+
+/* 2번 */
+.seats-2 .F1 {
+    top: 0;
+    left: 0;
+}
+
+.seats-2 .F2{
+    top: 0;
+    left: 85px;
+}
+
+.seats-2 .F3 {
+    top: 0;
+    left: 172px;
+}
+
+.seats-2 .F4{
+    top:108px;
+    left: 0;
+}
+
+.seats-2 .F5{
+    top: 108px;
+    left: 85px;
+}
+
+.seats-2 .F6{
+    top: 108px;
+    left: 172px;
+}
+
+/* 3번 */
+.seats-3 .E7 {
+    top: 0;
+    left: 0;
+}
+
+.seats-3 .E8{
+    top: 0;
+    left: 88px;
+}
+
+.seats-3 .E9 {
+    top: 0;
+    left: 174px;
+}
+
+.seats-3 .E10{
+    top:108px;
+    left: 0;
+}
+
+.seats-3 .E11{
+    top: 108px;
+    left: 88px;
+}
+
+.seats-3 .E12{
+    top: 108px;
+    left: 174px;
+}
+
+/* 4번 */
+.seats-4 .F7 {
+    top: 0;
+    left: 0;
+}
+
+.seats-4 .F8{
+    top: 0;
+    left: 85px;
+}
+
+.seats-4 .F9 {
+    top: 0;
+    left: 172px;
+}
+
+.seats-4 .F10{
+    top:108px;
+    left: 0;
+}
+
+.seats-4 .F11{
+    top: 108px;
+    left: 85px;
+}
+
+.seats-4 .F12{
+    top: 108px;
+    left: 172px;
+}
+
+/* modal */
+.modalBody {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.profileImg {
+	width: 160px;
+	height: 200px;
+	overflow: hidden;
+	margin-right: 20px;
+}
+
+.profileImg img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.userInfo {
+	font-size: 20px;
+	font-weight: bold;
+	color: #28424e;
+}
+
+.modalFooter {
+	text-align: center;
+}

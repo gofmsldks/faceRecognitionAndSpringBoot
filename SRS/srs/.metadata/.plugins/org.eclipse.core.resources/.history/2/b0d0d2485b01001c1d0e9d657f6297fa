@@ -1,0 +1,6 @@
+package com.ens.srs.temp.dto;
+
+public class tempDto {
+	private String userOne;
+	private String userTwo;
+}

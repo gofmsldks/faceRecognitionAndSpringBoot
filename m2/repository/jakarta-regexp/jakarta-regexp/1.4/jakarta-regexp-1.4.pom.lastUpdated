@@ -1,0 +1,13 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:26:57 KST 2021
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631003213502
+@default-jvnet-nexus-releases-https\://maven.java.net/content/repositories/releases/.lastUpdated=1631003215960
+http\://repository.apache.org/snapshots/.lastUpdated=1631003215768
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631003217127
+http\://repository.primefaces.org/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact jakarta-regexp\:jakarta-regexp\:pom\:1.4 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/jakarta-regexp/jakarta-regexp/1.4/jakarta-regexp-1.4.pom. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631003213188
+https\://maven.java.net/content/repositories/releases/.error=Could not transfer artifact jakarta-regexp\:jakarta-regexp\:pom\:1.4 from/to jvnet-nexus-releases (https\://maven.java.net/content/repositories/releases/)\: Failed to transfer https\://maven.java.net/content/repositories/releases/jakarta-regexp/jakarta-regexp/1.4/jakarta-regexp-1.4.pom. Error code 503, Service Unavailable\: Back-end server is at capacity
+http\://repository.primefaces.org/.lastUpdated=1631003215235
+http\://repository.apache.org/snapshots/.error=

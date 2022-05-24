@@ -1,0 +1,73 @@
+package com.ens.srs.user.auth.login.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.ens.srs.user.auth.login.dto.LoginDto;
+import com.ens.srs.user.auth.login.dto.LoginUserDto;
+import com.ens.srs.user.auth.login.service.LoginService;
+
+@Controller
+public class LoginController {
+
+	@Autowired
+	LoginService loginService;
+
+	@GetMapping("/login")
+	public String idLogin() {
+		return "idLogin";
+	}
+
+	@PostMapping("/api/user/login")
+	public ResponseEntity login(@RequestBody LoginDto loginDto) {
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("Content-Type", "application/json;charset=UTF-8");
+		headers.add("responseMessage", null);
+
+		int checkId = -1;
+		LoginUserDto loginUser = null;
+
+//		* responseMessage
+//		0 : 아이디 틀림
+//		1 : 아이디 일치
+//		2 : 아이디 일치, 비밀번호 틀림
+//		3 : 아이디 일치, 비밀번호 일치
+		
+		try {
+			checkId = loginService.loginCheckId(loginDto.getUserId());
+			if(checkId == 1) {
+				System.out.println("아이디 일치");
+				headers.set("responseMessage", "1");
+				
+				try {
+					loginUser = loginService.login(loginDto);
+					
+					if(loginUser == null) {
+						headers.set("responseMessage", "2");
+						return ResponseEntity.status(HttpStatus.UNAUTHORIZED).headers(headers).build();
+					}
+					
+					headers.set("responseMessage", "3");
+					return ResponseEntity.ok().headers(headers).body(user);
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+				
+			}else {
+				System.out.println("아이디 틀림");
+				headers.set("responseMessage", "0");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return ResponseEntity.ok().headers(headers).body(loginUserDto);
+	}
+
+}

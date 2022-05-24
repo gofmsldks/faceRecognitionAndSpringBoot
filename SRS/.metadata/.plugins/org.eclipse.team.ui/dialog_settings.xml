@@ -8,10 +8,22 @@
 	<section name="SynchronizeViewSettings">
 		<item key="linkWithEditor" value="false"/>
 		<item key="lastactiveparticipant_id" value="org.tigris.subversion.subclipse.participant"/>
-		<item key="lastactiveparticipant_sec_id" value="1629683037707"/>
+		<item key="lastactiveparticipant_sec_id" value="1630047809715"/>
 		<section name="org.tigris.subversion.subclipse.participant.1629683037707">
 			<item key="org.eclipse.team.ui.P_LAST_MODELPROVIDER" value="org.eclipse.team.ui.modelprovider_compressedfolders"/>
 			<item key="org.eclipse.team.ui.P_COMMIT_SET_ENABLED" value="false"/>
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1629957759146">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1630043927828">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1630047630057">
+		</section>
+		<section name="org.tigris.subversion.subclipse.participant.1630047809715">
+			<item key="org.eclipse.team.ui.P_LAST_MODELPROVIDER" value="org.eclipse.team.ui.modelprovider_compressedfolders"/>
+			<item key="org.eclipse.team.ui.P_COMMIT_SET_ENABLED" value="false"/>
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1630560243861">
 		</section>
 	</section>
 </section>

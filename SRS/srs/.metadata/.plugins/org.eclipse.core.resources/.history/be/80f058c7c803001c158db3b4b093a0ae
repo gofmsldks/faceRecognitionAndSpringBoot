@@ -1,0 +1,143 @@
+document.addEventListener("DOMContentLoaded", () => {
+	console.log("dom loaded");
+    const _seat = document.querySelector(".seat");
+    const _btnCancel = document.querySelector(".cancelReserve");
+    
+    const handleSeatbtnClick = (e)=>{
+    	e.preventDefault();
+    }
+    
+    const reservedAttr = (element, userInfo)=>{
+		const name = userInfo.userName;
+		const position = userInfo.position;
+		const phone = userInfo.phone;
+		element.innerText = name;
+    	element.setAttribute("data-target","#detailModal");
+    	element.setAttribute("data-name",`${name} ${position}`);
+    	element.setAttribute("data-phone",phone);
+    }
+    
+    const unReservedAttr = (element)=>{
+    	element.setAttribute("data-target","#");
+    	element.setAttribute("data-name","");
+    }
+    
+    const reflectStatus = async (status)=>{
+    	const userId = status.userId;
+		const _seatId = document.querySelector(`#${status.seatId}`);
+		
+		_seatId.classList.add("reserved");
+		
+		// 좌석 예약자 정보
+		const url="/api/user/info";
+		try{
+			const response = await fetch(url,{
+				method: "POST",
+				body: userId,
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+			
+			if(response.status === 200){
+				const userInfo = await response.json();
+				reservedAttr(_seatId, userInfo);
+			}
+		}catch(e){
+			console.log(e);
+		}
+    }
+    
+    const getSeatStatus = async ()=>{
+    	console.log("get seat status");
+		const url = "/api/seat/status";
+		
+    	try{
+			const response = await fetch(url, {
+				method: "GET",
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+			
+			if(response.status===200){
+				const seatStatus = await response.json();
+				seatStatus.forEach(status=>{
+					if(status.isReserved==="1"){
+						reflectStatus(status);
+					}
+				});
+			}
+    	}catch(e){
+    		console.log(e);
+    	}
+    }
+
+    const setDetail = (user) => {
+        const _userInfo = document.querySelector(".userInfo");
+        const _seatNum = _userInfo.querySelector(".seatNum");
+        const _name = _userInfo.querySelector(".name");
+    
+        let seatNum = user.id.split("");
+        seatNum.splice(1,0,"-");
+        seatNum = seatNum.join("");
+        _seatNum.innerText = seatNum;
+        _name.innerText = user.dataset.name;
+    }
+
+    const handleCancel = () => {
+        if (window.confirm("좌석을 취소하시겠습니까?")) {
+            alert("인증화면으로 이동합니다.");
+        }
+    }
+
+    const isPossible = (seat) => {
+        const classes = seat.classList;
+        return !(classes.contains("reserved"));
+    }
+
+    const handleReserve = (e) => {
+        if (e.target.tagName !== "BUTTON") return;
+        const possible = isPossible(e.target);
+        if (possible) {
+            if (window.confirm("예약 가능한 좌석입니다. 예약하시겠습니까?")) {
+                alert("인증화면으로 이동합니다.");
+            }
+        } else {
+            setDetail(e.target);
+        }
+    }
+
+    const getTime = () => {
+        const _cdate = document.querySelector(".cdate");
+        const _cday = document.querySelector(".cday");
+        const _curTime = document.querySelector(".curTime");
+
+        const WEEKDAY = ['일', '월', '화', '수', '목', '금', '토'];
+        const today = new Date();
+
+        const month = ('0' + (today.getMonth() + 1)).slice(-2);
+        const date = ('0' + today.getDate()).slice(-2);
+        const day = today.getDay();
+
+        const dateString = `${month}월 ${date}일`;
+        const dayString = `${WEEKDAY[day]}요일`
+
+        const hours = ('0' + today.getHours()).slice(-2);
+        const minutes = ('0' + today.getMinutes()).slice(-2);
+
+        const timeString = `${hours}시 ${minutes}분`;
+
+        _cdate.innerText = dateString
+        _cday.innerText = dayString
+        _curTime.innerText = timeString
+    }
+
+    _seat.addEventListener("click", handleReserve);
+    _btnCancel.addEventListener("click", handleCancel);
+
+    getSeatStatus();
+    
+    getTime();
+    window.setInterval(getTime, 50000);
+})

@@ -1,0 +1,13 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:27:12 KST 2021
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631003228572
+@default-jvnet-nexus-releases-https\://maven.java.net/content/repositories/releases/.lastUpdated=1631003231137
+http\://repository.apache.org/snapshots/.lastUpdated=1631003230946
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631003232084
+http\://repository.primefaces.org/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact com.google.zxing\:zxing-parent\:pom\:2.3.0 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/com/google/zxing/zxing-parent/2.3.0/zxing-parent-2.3.0.pom. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631003228275
+https\://maven.java.net/content/repositories/releases/.error=Could not transfer artifact com.google.zxing\:zxing-parent\:pom\:2.3.0 from/to jvnet-nexus-releases (https\://maven.java.net/content/repositories/releases/)\: Failed to transfer https\://maven.java.net/content/repositories/releases/com/google/zxing/zxing-parent/2.3.0/zxing-parent-2.3.0.pom. Error code 503, Service Unavailable\: Back-end server is at capacity
+http\://repository.primefaces.org/.lastUpdated=1631003230460
+http\://repository.apache.org/snapshots/.error=

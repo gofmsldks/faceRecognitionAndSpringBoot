@@ -1,0 +1,20 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:39:35 KST 2021
+http\://repository.primefaces.org/.error=
+http\://jasperreports.sourceforge.net/maven2/.error=
+http\://repository.apache.org/snapshots/.error=
+http\://jasperreports.sourceforge.net/maven2/.lastUpdated=1631003975069
+http\://spring-json.sourceforge.net/repository/.error=
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631003468347
+http\://repository.primefaces.org/.lastUpdated=1631003654786
+http\://repository.apache.org/snapshots/.lastUpdated=1631003709472
+http\://maven.jahia.org/maven2/.error=
+http\://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/.lastUpdated=1631003975567
+http\://maven.jahia.org/maven2/.lastUpdated=1631003974128
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.error=
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.olap4j\:olap4j\:jar\:0.9.7.309-JS-3 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/org/olap4j/olap4j/0.9.7.309-JS-3/olap4j-0.9.7.309-JS-3.jar. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631003417826
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631003944282
+https\://maven.java.net/content/repositories/releases/.lastUpdated=1631003829652
+http\://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/.error=
+https\://maven.java.net/content/repositories/releases/.error=

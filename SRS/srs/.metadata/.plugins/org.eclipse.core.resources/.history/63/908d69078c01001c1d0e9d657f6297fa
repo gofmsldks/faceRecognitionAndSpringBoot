@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ens.srs.mappers.seatmapper">
+	<resultMap type="ReservationDto" id="status">
+		<result column="seat_id" property="seatId"/>
+		<result column="is_reserved" property="isReserved"/>
+		<result column="user_id" property="userId"/>
+		<result column="reserve_date" property="reserveDate"/>
+	</resultMap>
+
+	<select id="login" parameterType="LoginDto"
+		resultMap="login">
+		SELECT
+		user_id
+		,user_name
+		,phone
+		,position
+		FROM user
+		WHERE user_id=#{userId} AND user_pw=#{userPw}
+	</select>
+	
+	<select id="status" resultMap="status">
+	SELECT *
+	FROM seat
+	</select>
+</mapper>

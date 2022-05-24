@@ -9,7 +9,6 @@
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.ens.srs.LoggingApplication"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="srs"/>
 <stringAttribute key="process_factory_id" value="org.springframework.ide.eclipse.boot.launch.process.BootProcessFactory"/>
 <stringAttribute key="spring.boot.app.properties" value=""/>
 <booleanAttribute key="spring.boot.dash.hidden" value="false"/>

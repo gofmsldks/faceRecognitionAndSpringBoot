@@ -99,7 +99,7 @@ class faceRecognitionModel:
         if update is False:
             # load picke if pickle exist
             print("update == False. 기존 picke 로드...\n")
-            with open("C:/ensglobal/facerecognition/test_pickle/user.pickle", "rb") as fr:
+            with open("C:/ensglobal_srs/facerecognition/test_pickle/user.pickle", "rb") as fr:
                 img2_representation_list = pickle.load(fr)
         else:
             print("update == True. update 진행...\n")
@@ -197,7 +197,7 @@ class faceRecognitionModel:
                 # ----------------------
                 # img2_representation pickel에 저장
                 if update is True:
-                    with open("C:/ensglobal/facerecognition/test_pickle/user.pickle", "wb") as fw:
+                    with open("C:/ensglobal_srs/facerecognition/test_pickle/user.pickle", "wb") as fw:
                         pickle.dump(img2_representation_list, fw)
                 else:
                     pass
@@ -277,14 +277,14 @@ class faceRecognitionModel:
 
     def loadUserImgPath(self,detectionTempFacePath):
         userImgPath = []
-        for path in glob.glob("C:/ensglobal/facerecognition/test_image/*.jpg"):
+        for path in glob.glob("C:/ensglobal_srs/facerecognition/test_image/*.jpg"):
             userImgPath.append([detectionTempFacePath, path])
         return userImgPath
 
     # user의 이름(사번) 로드
     def loadSavedUserImgName(self):
         userName = []
-        for path in glob.glob("C:/ensglobal/facerecognition/test_image/*.jpg"):
+        for path in glob.glob("C:/ensglobal_srs/facerecognition/test_image/*.jpg"):
             prePath, fileName = os.path.split(path)
             userName.append(os.path.splitext(fileName)[0])
 

@@ -3,13 +3,13 @@ from .FaceRecognitionModel import faceRecognitionModel
 BACKENDS = ['opencv', 'ssd', 'dlib', 'mtcnn', 'retinaface']
 METRICS = ["cosine", "euclidean", "euclidean_l2"]
 
-def run(update = False):
+def run(update):
 
     # 모델 class 선언
     faceRecognition = faceRecognitionModel()
 
     # 사진 경로
-    TEMP_PATH = "C:/ensglobal/facerecognition/tempface/recFace.jpg"
+    TEMP_PATH = "C:/ensglobal_srs/facerecognition/tempface/recFace.jpg"
 
     userImgPath = faceRecognition.loadUserImgPath(TEMP_PATH)
     print(f"로드 된 유저 이미지 PATH: {userImgPath}")

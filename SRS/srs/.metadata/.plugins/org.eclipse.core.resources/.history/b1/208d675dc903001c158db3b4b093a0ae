@@ -1,0 +1,151 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SRS : HOME</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- custum css -->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/reservation.css">
+
+<!-- google font noto sans -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+	rel="stylesheet">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid wrap">
+		<div class="navbar-header">
+			<a class="navbar-brand logo-icon" href="#"> </a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<div class="header">
+				<h4 class="title">좌석예약시스템</h4>
+				<div class="date">
+					<div class="curDate">
+						<span class="cdate">02월 05일</span> <span class="cday">월요일</span>
+					</div>
+					<div class="curTime">12시 34분</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row content">
+			<div>
+				<div class="imgWrap">
+					<div class="seat">
+						<div class="seats-1">
+							<button class="E1" id="E1" data-toggle="modal" data-target="#"
+								data-name="">E-1</button>
+							<button class="E2" id="E2" data-toggle="modal" data-target="#"
+								data-name="">E-2</button>
+							<button class="E3" id="E3" data-toggle="modal" data-target="#"
+								data-name="">E-3</button>
+							<button class="E4" id="E4" data-toggle="modal" data-target="#"
+								data-name="">E-4</button>
+							<button class="E5" id="E5" data-toggle="modal" data-target="#"
+								data-name="">E-5</button>
+							<button class="E6" id="E6" data-toggle="modal" data-target="#"
+								data-name="">E-6</button>
+						</div>
+						<div class="seats-2">
+							<button class="F1" id="F1" data-toggle="modal" data-target="#"
+								data-name="">F-1</button>
+							<button class="F2 reserved" id="F2" data-toggle="modal"
+								data-target="#" data-name="">F-2</button>
+							<button class="F3" id="F3" data-toggle="modal" data-target="#"
+								data-name="">F-3</button>
+							<button class="F4" id="F4" data-toggle="modal" data-target="#"
+								data-name="">F-4</button>
+							<button class="F5" id="F5" data-toggle="modal" data-target="#"
+								data-name="">F-5</button>
+							<button class="F6 reserved" id="F6" data-toggle="modal"
+								data-target="#" data-name="">F-6</button>
+						</div>
+						<div class="seats-3">
+							<button class="E7" id="E7" data-toggle="modal" data-target="#"
+								data-name="">E-7</button>
+							<button class="E8" id="E8" data-toggle="modal" data-target="#"
+								data-name="">E-8</button>
+							<button class="E9 reserved" id="E9" data-toggle="modal"
+								data-target="#" data-name="">E-9</button>
+							<button class="E10" id="E10" data-toggle="modal" data-target="#"
+								data-name="">E-10</button>
+							<button class="E11" id="E11" data-toggle="modal" data-target="#"
+								data-name="">E-11</button>
+							<button class="E12" id="E12" data-toggle="modal" data-target="#"
+								data-name="">E-12</button>
+						</div>
+						<div class="seats-4">
+							<button class="F7" id="F7" data-toggle="modal" data-target="#"
+								data-name="">F-7</button>
+							<button class="F8" id="F8" data-toggle="modal" data-target="#"
+								data-name="">F-8</button>
+							<button class="F9" id="F9" data-toggle="modal" data-target="#"
+								data-name="">F-9</button>
+							<button class="F10" id="F10" data-toggle="modal" data-target="#"
+								data-name="">F-10</button>
+							<button class="F11 reserved" id="F11" data-toggle="modal"
+								data-target="#" data-name="">F-11</button>
+							<button class="F12" id="F12" data-toggle="modal" data-target="#"
+								data-name="">F-12</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal -->
+			<div class="modal fade" id="detailModal" role="dialog">
+				<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body modalBody">
+							<div class="profileImg">
+								<img src="/img/default_profile_img.jpg" alt="프로필 이미지">
+							</div>
+							<div class="userInfo">
+								<div class="seatNum">
+									좌석 번호 : <span>F-2</span>
+								</div>
+								<div class="name">전현태 팀장</div>
+								<div class="phoneNum">010-xxxx-xxxx</div>
+							</div>
+						</div>
+						<div class="modal-footer modalFooter">
+							<button type="button" class="btn btn-primary cancelReserve"
+								data-dismiss="modal">좌석 취소</button>
+							<button type="button" class="btn btn-default"
+								data-dismiss="modal">홈으로 돌아가기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="/js/reservation.js"></script>
+</body>
+</html>

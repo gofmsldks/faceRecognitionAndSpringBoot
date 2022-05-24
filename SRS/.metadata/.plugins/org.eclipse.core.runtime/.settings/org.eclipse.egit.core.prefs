@@ -1,2 +1,5 @@
+GitRepositoriesView.GitDirectories=C\:\\ensglobal\\SRS\\srs\\.git;
+GitRepositoriesView.GitDirectories.relative=srs\\.git;
+RepositoryGroups.uuids=
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

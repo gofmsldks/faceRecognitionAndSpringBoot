@@ -1,0 +1,6 @@
+package com.ens.srs.user.auth.login;
+
+public class LoginDto {
+	private String userId;
+	private String userPw;
+}

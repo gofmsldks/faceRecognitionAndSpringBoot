@@ -12,7 +12,7 @@
 import cv2
 import platform
 
-src = 1
+src = 0
 
 if platform.system() == 'Windows' :
     captrue = cv2.VideoCapture( src , cv2.CAP_DSHOW )

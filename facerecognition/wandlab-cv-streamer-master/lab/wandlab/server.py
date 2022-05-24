@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-#-------------------------------------------------#
+# -------------------------------------------------#
 # Date created          : 2020. 8. 18.
 # Date last modified    : 2020. 8. 19.
 # Author                : chamadams@gmail.com
@@ -7,7 +7,7 @@
 # License               : GNU General Public License(GPL) 2.0
 # Version               : 0.1.0
 # Python Version        : 3.6+
-#-------------------------------------------------#
+# -------------------------------------------------#
 
 from flask import Flask
 from flask import request
@@ -19,12 +19,11 @@ import requests
 import json
 from .streamer import Streamer
 
-app = Flask( __name__ )
+app = Flask(__name__)
 
 
-@app.route('/resultRecognition', methods = ['POST'])
+@app.route('/resultRecognition', methods=['POST'])
 def resultRecognition():
-
     try:
         print(request.is_json)
         params = request.get_json()
@@ -35,29 +34,26 @@ def resultRecognition():
         print("오류 발생")
 
 
-
 @app.route('/stream')
 def stream():
-
     global streamer
     streamer = Streamer()
 
-    src = request.args.get( 'src', default = 0, type = int )
+    src = request.args.get('src', default=0, type=int)
 
-    try :
+    try:
         return Response(
-                                stream_with_context( stream_gen( src ) ),
-                                mimetype='multipart/x-mixed-replace; boundary=frame' )
+            stream_with_context(stream_gen(src)),
+            mimetype='multipart/x-mixed-replace; boundary=frame')
 
-    except Exception as e :
+    except Exception as e:
 
-        print('[wandlab] ', 'stream error : ',str(e))
+        print('[wandlab] ', 'stream error : ', str(e))
 
 
-def stream_gen( src ):   
-  
-    try : 
-        
+def stream_gen(src):
+    try:
+
         streamer.run(src)
         while True:
             frame, img, face, result = streamer.bytescode()
@@ -74,12 +70,12 @@ def stream_gen( src ):
 
                 if 'DETECTION' in result.keys():
                     print("얼굴 검출 실패")
-                    parsedAllResult = {"None" : [None, False]}
-                    successResult = {'None' : 0.0}
+                    parsedAllResult = {"None": [None, False]}
+                    successResult = {'None': 0.0}
                 else:
                     parsedAllResult = streamer.result_parser(result)
                     successResult = streamer.loadPrePropResult(parsedAllResult)
-                params = {"parsedAllResult" : parsedAllResult , "successResult" : successResult}
+                params = {"parsedAllResult": parsedAllResult, "successResult": successResult}
                 print(f"전달하는 json 값: {json.dumps(params)}")
 
                 response = requests.post(url=testUrl, data=json.dumps(params), headers=headers)
@@ -89,7 +85,7 @@ def stream_gen( src ):
 
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-                    
-    except GeneratorExit :
-        #print( '[wandlab]', 'disconnected stream' )
+
+    except GeneratorExit:
+        # print( '[wandlab]', 'disconnected stream' )
         streamer.stop()

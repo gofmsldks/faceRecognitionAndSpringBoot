@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ens.srs.mappers.seatmapper">
+	<resultMap type="SeatInfoDto" id="getSeatInfo">
+		<result column="NO_SEAT" property="noSeat" />
+		<result column="YN_FIX" property="ynFix" />
+		<result column="SEQ" property="seq" />
+	</resultMap>
+
+	<resultMap type="ReservationDto" id="getStatus">
+		<result column="ID_USER" property="idUser" />
+		<result column="NM_USER" property="nmUser" />
+		<result column="NO_SEAT" property="noSeat" />
+		<result column="CD_TEAM" property="cdTeam" />
+		<result column="NM_TEAM" property="nmTeam" />
+		<result column="CD_RANK" property="cdRank" />
+		<result column="NM_RANK" property="nmRank" />
+	</resultMap>
+
+	<select id="getSeatInfo" resultMap="getSeatInfo">
+		SELECT NO_SEAT
+			  ,YN_FIX
+			  ,SEQ
+		FROM fix_seat
+	</select>
+
+	<select id="checkReserve" parameterType="String"
+		resultType="int">
+		SELECT COUNT(*)
+		FROM day_seat
+		WHERE ID_USER = #{userId}
+		AND DATE_SEAT = DATE_FORMAT(CURRENT_TIMESTAMP, '%Y-%m-%d')
+	</select>
+
+	<insert id="reserve" parameterType="ReservationDto">
+		INSERT INTO day_seat
+			   (DATE_SEAT
+			   ,ID_USER
+			   ,NM_USER
+			   ,NO_SEAT
+			   ,CD_TEAM
+			   ,NM_TEAM
+			   ,CD_RANK
+			   ,NM_RANK)
+		VALUES (DATE_FORMAT(CURRENT_TIMESTAMP, '%Y-%m-%d')
+			   ,#{idUser}
+			   ,#{nmUser}
+			   ,#{noSeat}
+			   ,#{cdTeam}
+			   ,#{nmTeam}
+			   ,#{cdRank}
+			   ,#{nmRank})
+	</insert>
+
+	<select id="getStatus" resultMap="getStatus">
+		SELECT *
+		FROM day_seat
+		WHERE DATE_SEAT = DATE_FORMAT(CURRENT_TIMESTAMP, '%Y-%m-%d')
+	</select>
+
+	<select id="checkOwner" parameterType="String"
+		resultType="String">
+		SELECT ID_USER
+		FROM day_seat
+		WHERE NO_SEAT = #{noSeat}
+		AND DATE_SEAT = DATE_FORMAT(CURRENT_TIMESTAMP, '%Y-%m-%d')
+	</select>
+
+	<delete id="cancel" parameterType="ReserveUserDto">
+		DELETE FROM day_seat
+		WHERE ID_USER = #{idUser}
+		AND NO_SEAT = #{noSeat}
+		AND DATE_SEAT = DATE_FORMAT(CURRENT_TIMESTAMP, '%Y-%m-%d')
+	</delete>
+
+	<update id="change" parameterType="ReserveUserDto">
+		UPDATE day_seat
+		SET NO_SEAT = #{noSeat}
+		WHERE ID_USER = #{idUser}
+		AND DATE_SEAT = DATE_FORMAT(CURRENT_TIMESTAMP, '%Y-%m-%d')
+	</update>
+
+</mapper>

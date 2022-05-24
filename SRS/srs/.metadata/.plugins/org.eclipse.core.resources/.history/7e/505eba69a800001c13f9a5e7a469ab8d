@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.container-fluid.wrap {
+    height: calc(100vh - 60px);
+    background-color: #f2f2f2;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 15px;
+    height: 70px;
+}
+
+.logo-icon {
+    width: 160px;
+    background: url(./logo_kr.PNG) no-repeat 15px 10px/130px 50px;
+    height: 70px;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: bold;
+    color: #28424e;
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: #28424e;
+}
+
+.curDate {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.curTime {
+    margin-left: 14px;
+    font-size: 26px;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+.row.content {
+    height: calc(100vh - 170px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 20px 50px;
+}
+
+.seat {
+    width: 598px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.seat::before {
+    content: "";
+    background: url(./seat.png) no-repeat;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.seat button {
+    position: absolute;
+    background-color: transparent;
+    width: 84px;
+    height: 100px;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0 0 10px #fff;
+    background-color: #007ff71f;
+    border: none;
+    border-radius: 8px;
+}
+
+.seat button:hover {
+    background-color: #daedfd;
+}
+
+.reserved {
+    background-color: #c9f694ba !important;
+}
+
+.reserved:hover {
+    background-color: #c9f694 !important;
+}
+
+.seats-1, .seats-2, .seats-3, .seats-4 {
+    position: absolute;
+}
+
+.seats-1 {
+    top:0;
+    left: 0;
+}
+
+.seats-2 {
+    top:0;
+    left: 340px;
+}
+
+.seats-3 {
+    top:267px;
+    left: 0;
+}
+
+.seats-4 {
+    top:267px;
+    left: 340px;
+}
+
+/* 1번 */
+.seats-1 .seat-1 {
+    top: 0;
+    left: 0;
+}
+
+.seats-1 .seat-2{
+    top: 0;
+    left: 88px;
+}
+
+.seats-1 .seat-3 {
+    top: 0;
+    left: 174px;
+}
+
+.seats-1 .seat-4{
+    top:108px;
+    left: 0;
+}
+
+.seats-1 .seat-5{
+    top: 108px;
+    left: 88px;
+}
+
+.seats-1 .seat-6{
+    top: 108px;
+    left: 174px;
+}
+
+/* 2번 */
+.seats-2 .seat-1 {
+    top: 0;
+    left: 0;
+}
+
+.seats-2 .seat-2{
+    top: 0;
+    left: 85px;
+}
+
+.seats-2 .seat-3 {
+    top: 0;
+    left: 172px;
+}
+
+.seats-2 .seat-4{
+    top:108px;
+    left: 0;
+}
+
+.seats-2 .seat-5{
+    top: 108px;
+    left: 85px;
+}
+
+.seats-2 .seat-6{
+    top: 108px;
+    left: 172px;
+}
+
+/* 3번 */
+.seats-3 .seat-1 {
+    top: 0;
+    left: 0;
+}
+
+.seats-3 .seat-2{
+    top: 0;
+    left: 88px;
+}
+
+.seats-3 .seat-3 {
+    top: 0;
+    left: 174px;
+}
+
+.seats-3 .seat-4{
+    top:108px;
+    left: 0;
+}
+
+.seats-3 .seat-5{
+    top: 108px;
+    left: 88px;
+}
+
+.seats-3 .seat-6{
+    top: 108px;
+    left: 174px;
+}
+
+/* 4번 */
+.seats-4 .seat-1 {
+    top: 0;
+    left: 0;
+}
+
+.seats-4 .seat-2{
+    top: 0;
+    left: 85px;
+}
+
+.seats-4 .seat-3 {
+    top: 0;
+    left: 172px;
+}
+
+.seats-4 .seat-4{
+    top:108px;
+    left: 0;
+}
+
+.seats-4 .seat-5{
+    top: 108px;
+    left: 85px;
+}
+
+.seats-4 .seat-6{
+    top: 108px;
+    left: 172px;
+}
+
+/* modal */
+.modalBody {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+align-items: center;
+}
+
+.profileImg {
+    width: 160px;
+    height: 200px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.profileImg img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.userInfo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #28424e;
+}
+
+.modalFooter {
+    text-align: center;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height: auto;} 
+}

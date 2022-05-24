@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- select AES_DECRYPT(password,SHA2("enc_key",512)) AS pass FROM user_seat 
+	WHERE id_user ="50000010" -->
+
+
+<mapper namespace="com.ens.srs.mappers.usermapper">
+	<resultMap type="UserDto" id="login">
+		<result column="ID_USER" property="idUser" />
+		<result column="NM_USER" property="nmUser" />
+		<result column="CD_TEAM" property="cdTeam" />
+		<result column="NM_TEAM" property="nmTeam" />
+		<result column="CD_RANK" property="cdRank" />
+		<result column="NM_RANK" property="nmRank" />
+	</resultMap>
+	
+	<resultMap type="TeamDto" id="getTeams">
+		<result column="CD_TEAM" property="cdTeam"/>
+		<result column="NM_TEAM" property="nmTeam"/>
+	</resultMap>
+
+	<select id="loginCheckId" parameterType="String"
+		resultType="int">
+		SELECT COUNT(*)
+		FROM user_seat
+		WHERE ID_USER = #{userId}
+		AND YN_USE='Y'
+	</select>
+
+	<select id="login" parameterType="LoginDto" resultMap="login">
+		SELECT ID_USER
+			  ,NM_USER
+			  ,CD_TEAM
+			  ,NM_TEAM
+			  ,CD_RANK
+			  ,NM_RANK
+		FROM user_seat
+		WHERE PASSWORD = AES_ENCRYPT(#{userPw},SHA2("enc_key",512))
+		AND ID_USER = #{userId};
+	</select>
+	
+	<select id="getPassword" parameterType="String"
+		resultType="String">
+		SELECT AES_DECRYPT(PASSWORD, SHA2("enc_key",512)) 
+		FROM user_seat 
+		WHERE ID_USER = #{userId}
+	</select>
+	
+	<update id="updatePassword" parameterType="LoginDto">
+		UPDATE user_seat
+		SET PASSWORD = AES_ENCRYPT(#{userPw}, SHA2("enc_key",512))
+		WHERE ID_USER = #{userId} 
+	</update>
+	
+	<select id="getUserInfo" parameterType="String"
+		resultMap="login">
+		SELECT ID_USER
+			  ,NM_USER
+			  ,CD_TEAM
+			  ,NM_TEAM
+			  ,CD_RANK
+			  ,NM_RANK
+		FROM user_seat
+		WHERE ID_USER = #{userId}
+	</select>
+	
+	<select id="getTeams" resultMap="getTeams">
+		SELECT CD_TEAM
+			  ,NM_TEAM
+		FROM user_seat
+		WHERE YN_USE = "Y"
+		GROUP BY CD_TEAM
+			  	,NM_TEAM
+	</select>
+	
+	<select id="getMembers" parameterType="String" 
+		resultMap="login">
+		SELECT ID_USER
+			  ,NM_USER
+			  ,CD_TEAM
+			  ,NM_TEAM
+			  ,CD_RANK
+			  ,NM_RANK
+		FROM user_seat
+		WHERE CD_TEAM = #{cdTeam}
+	</select>
+	
+</mapper>

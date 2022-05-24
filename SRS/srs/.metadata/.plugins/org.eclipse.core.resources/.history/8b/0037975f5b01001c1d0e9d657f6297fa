@@ -1,0 +1,38 @@
+package com.ens.srs.user.auth.login.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.ens.srs.user.auth.login.dto.LoginDto;
+import com.ens.srs.user.auth.login.dto.LoginUserDto;
+import com.ens.srs.user.auth.login.service.LoginService;
+
+@Controller
+public class LoginController {
+	
+	@Autowired
+	LoginService loginService;
+
+	@GetMapping("/login")
+	public String idLogin() {
+		return "idLogin";
+	}
+
+	@PostMapping("/api/user/login")
+	public ResponseEntity login(@RequestBody LoginDto loginDto) {
+		HttpHeaders headers = new HttpHeaders();
+		
+		System.out.println("login Dto : " + loginDto);
+		
+		LoginUserDto loginUserDto = loginService.login();
+
+		return new ResponseEntity<LoginUserDto>(loginUserDto, headers, HttpStatus.OK);
+	}
+
+}

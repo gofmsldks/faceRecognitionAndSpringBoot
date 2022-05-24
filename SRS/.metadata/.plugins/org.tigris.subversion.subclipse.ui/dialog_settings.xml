@@ -12,6 +12,22 @@
 	<item key="HistoryTableProvider.SVNHistoryPage.Date" value="214"/>
 	<item key="HistoryTableProvider.SVNHistoryPage.Author" value="171"/>
 	<item key="HistoryTableProvider.SVNHistoryPage.Comment" value="428"/>
+	<item key="UpdateDialogWithConflictHandling.location.x" value="720"/>
+	<item key="UpdateDialogWithConflictHandling.location.y" value="0"/>
+	<item key="UpdateDialogWithConflictHandling.size.x" value="613"/>
+	<item key="UpdateDialogWithConflictHandling.size.y" value="871"/>
+	<item key="HistoryTableProvider.revisions.Revision" value="102"/>
+	<item key="HistoryTableProvider.revisions.Date" value="254"/>
+	<item key="HistoryTableProvider.revisions.Author" value="202"/>
+	<item key="HistoryTableProvider.revisions.Comment" value="507"/>
+	<item key="HistoryTableProvider.revisionsBlock.Revision" value="102"/>
+	<item key="HistoryTableProvider.revisionsBlock.Date" value="254"/>
+	<item key="HistoryTableProvider.revisionsBlock.Author" value="202"/>
+	<item key="HistoryTableProvider.revisionsBlock.Comment" value="507"/>
+	<item key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Revision" value="102"/>
+	<item key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Date" value="255"/>
+	<item key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Author" value="203"/>
+	<item key="HistoryTableProvider.MergeWizardUnblockRevisionsPage.Comment" value="509"/>
 	<section name="NewLocationWizard">
 		<list key="ConfigurationWizardMainPage.STORE_URL_ID">
 			<item value="https://10.1.2.15:8443/svn/"/>

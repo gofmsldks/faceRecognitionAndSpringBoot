@@ -1,0 +1,11 @@
+package com.ens.srs.user.information.service;
+
+import org.springframework.stereotype.Service;
+
+import com.ens.srs.user.information.dao.InformationDao;
+
+@Service
+public class InformationService {
+	
+	private InformationDao informationDao;
+}

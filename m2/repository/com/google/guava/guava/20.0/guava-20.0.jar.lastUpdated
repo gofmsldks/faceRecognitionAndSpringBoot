@@ -1,0 +1,13 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:41:01 KST 2021
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631004008643
+http\://repository.apache.org/snapshots/.lastUpdated=1631004030141
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631004061209
+http\://repository.primefaces.org/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+https\://maven.java.net/content/repositories/releases/.lastUpdated=1631004054124
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact com.google.guava\:guava\:jar\:20.0 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/com/google/guava/guava/20.0/guava-20.0.jar. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631004004728
+https\://maven.java.net/content/repositories/releases/.error=
+http\://repository.primefaces.org/.lastUpdated=1631004025991
+http\://repository.apache.org/snapshots/.error=

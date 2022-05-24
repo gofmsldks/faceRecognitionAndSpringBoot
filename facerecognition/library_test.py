@@ -13,7 +13,7 @@ print(matplotlib.__version__)
 print(tensorflow.__version__)
 
 # img_url = urllib.request.urlretrieve("https://upload.wikimedia.org/wikipedia/ko/2/24/Lenna.png", "Lena.png")
-img = cv2.imread("C:/ensglobal/facerecognition/Lena.png", cv2.IMREAD_COLOR)
+img = cv2.imread("C:/ensglobal_srs/facerecognition/Lena.png", cv2.IMREAD_COLOR)
 cv2.imshow('image', img)
 
 cv2.waitKey(0)

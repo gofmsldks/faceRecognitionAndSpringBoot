@@ -1,0 +1,11 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:10:55 KST 2021
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631002251760
+http\://repository.apache.org/snapshots/.lastUpdated=1631002254245
+http\://repository.primefaces.org/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+https\://maven.java.net/content/repositories/releases/.lastUpdated=1631002255503
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact javax.mail\:mail\:pom\:1.4.2 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/javax/mail/mail/1.4.2/mail-1.4.2.pom. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631002251449
+http\://repository.primefaces.org/.lastUpdated=1631002253748
+http\://repository.apache.org/snapshots/.error=

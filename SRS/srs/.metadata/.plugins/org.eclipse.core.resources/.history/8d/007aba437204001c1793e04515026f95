@@ -1,0 +1,5 @@
+package com.ens.srs.user.auth.facerecognition.service;
+
+public class FaceRecogService {
+
+}

@@ -1,0 +1,18 @@
+package com.ens.srs.user.information.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ens.srs.user.auth.login.dto.UserDto;
+import com.ens.srs.user.information.dao.InformationDao;
+
+@Service
+public class InformationService {
+	
+	@Autowired
+	private InformationDao informationDao;
+	
+	public UserDto getUserInfo() {
+		return informationDao.getUserInfo();
+	}
+}

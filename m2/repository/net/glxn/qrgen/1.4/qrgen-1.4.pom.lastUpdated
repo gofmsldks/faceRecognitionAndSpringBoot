@@ -1,0 +1,13 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:27:47 KST 2021
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631003263067
+http\://repository.apache.org/snapshots/.lastUpdated=1631003265309
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631003267912
+http\://repository.primefaces.org/.error=
+http\://spring-json.sourceforge.net/repository/.error=
+https\://maven.java.net/content/repositories/releases/.lastUpdated=1631003266845
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact net.glxn\:qrgen\:pom\:1.4 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/net/glxn/qrgen/1.4/qrgen-1.4.pom. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631003261989
+https\://maven.java.net/content/repositories/releases/.error=
+http\://repository.primefaces.org/.lastUpdated=1631003264820
+http\://repository.apache.org/snapshots/.error=

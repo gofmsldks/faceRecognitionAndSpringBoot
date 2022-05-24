@@ -1,0 +1,20 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Sep 07 17:39:35 KST 2021
+http\://repository.primefaces.org/.error=
+http\://jasperreports.sourceforge.net/maven2/.error=
+http\://repository.apache.org/snapshots/.error=
+http\://jasperreports.sourceforge.net/maven2/.lastUpdated=1631003975067
+http\://spring-json.sourceforge.net/repository/.error=
+http\://spring-json.sourceforge.net/repository/.lastUpdated=1631003468334
+http\://repository.primefaces.org/.lastUpdated=1631003654772
+http\://repository.apache.org/snapshots/.lastUpdated=1631003709464
+http\://maven.jahia.org/maven2/.error=
+http\://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/.lastUpdated=1631003975566
+http\://maven.jahia.org/maven2/.lastUpdated=1631003974128
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.error=
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact javax.inject\:javax.inject\:jar\:1 from/to central (http\://repo.maven.apache.org/maven2)\: Failed to transfer http\://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.jar. Error code 501, HTTPS Required
+@default-central-http\://repo.maven.apache.org/maven2/.lastUpdated=1631003417809
+http\://repository.jboss.org/nexus/content/groups/public-jboss/.lastUpdated=1631003944041
+https\://maven.java.net/content/repositories/releases/.lastUpdated=1631003829644
+http\://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/.error=
+https\://maven.java.net/content/repositories/releases/.error=

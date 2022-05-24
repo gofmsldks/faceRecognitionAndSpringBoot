@@ -1,0 +1,53 @@
+document.addEventListener("DOMContentLoaded", () => {
+	console.log("dom loaded");
+	
+	const _btnSubmit = document.querySelector(".btnSubmit");
+	
+	const saveSeatInfo = async (userId)=>{
+		const url = new URL(location.href);
+		const urlParams = url.searchParams;
+		console.log(urlParams.get("seat"));
+	}
+	
+	const handleSubmit = async (e)=>{
+		e.preventDefault();
+		console.log("submit");
+
+		const _userId = document.querySelector("#userId");
+		const _userPw = document.querySelector("#userPw");
+
+		// 아이디 or 패스워드 공백 처리
+		if (_userId.value === "") {
+			alert("아이디를 입력해주세요.");
+			return;
+		} else if (_userPw.value === "") {
+			alert("비밀번호를 입력해주세요.");
+			return;
+		}
+
+		const url = "/api/user/login";
+		const data = {
+			userId: _userId.value,
+			userPw: _userPw.value
+		};
+
+		try{
+			const response = await fetch(url, {
+				method: "POST",
+				body: JSON.stringify(data),
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+			if(response.status === 200){
+				const user = await response.json();
+				saveSeatInfo(user.userId);
+				alert(`${user.userName} ${user.position}님 좌석 예약 성공하셨습니다.`);
+			}
+		}catch(e){
+			console.log(e);
+		}
+	}
+	
+	_btnSubmit.addEventListener("click",handleSubmit);
+});
